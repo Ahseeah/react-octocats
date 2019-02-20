@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import ReactDOM from 'react-dom'
 import logo from './images/logo.png'
 import Gobble from './images/gobble.gif'
 import Lucha from './images/lucha.png'
@@ -16,9 +15,11 @@ class App extends Component {
         <header>
           <img src={logo} />
         </header>
-        {cats.map(catImages => (
-          <Octocats catImages={catImages} />
-        ))}
+        <section className="container">
+          {cats.map(catImages => (
+            <Octocats catImages={catImages} />
+          ))}
+        </section>
       </>
     )
   }
